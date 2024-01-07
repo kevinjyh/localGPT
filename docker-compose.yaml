@@ -1,0 +1,12 @@
+version: '3.8'
+services:
+  localgpt:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/home/localgpt
+      - $HOME/.cache:/root/.cache
+    # environment:
+    #   - device_type='cuda'
+    # command: python run_localGPT.py --device_type $device_type
